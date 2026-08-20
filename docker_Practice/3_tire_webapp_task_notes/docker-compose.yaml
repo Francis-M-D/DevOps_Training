@@ -1,0 +1,27 @@
+services:
+
+  frontend:
+    build: ./frontend
+    ports:
+      - 80:80
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    ports:
+      - 5000:5000
+    environment:
+      MONGO_URL: mongodb://database:27017/main_db
+    depends_on:
+      - database
+
+  database:
+    image: mongo:latest
+    #ports:
+      #- 27017:27017
+    volumes:
+      - main_db:/data/db
+
+volumes:
+  main_db:
