@@ -1,0 +1,25 @@
+services:
+  master:
+    build: .
+    container_name: ansible_master
+    hostname: ansible_master
+    image: ansible_master:latest
+    tty: true
+    stdin_open: true
+    networks:
+      - ansible_net
+  worker-1:
+    build: .
+    image: ansible_worker:latest
+    tty: true
+    stdin_open: true
+    container_name: ansible_worker-1
+    hostname: ansible_worker-1
+    networks:
+      - ansible_net
+    depends_on:
+      - master
+
+networks:
+  ansible_net:
+    name: ansible_net
