@@ -1,0 +1,15 @@
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+  name: my-sample-pod
+  labels:
+    project: calculator
+
+spec:
+  containers:
+    - name: my-calc
+      image: simplebyte/simplybyte-calculator
+      ports:
+        - containerPort: 5000

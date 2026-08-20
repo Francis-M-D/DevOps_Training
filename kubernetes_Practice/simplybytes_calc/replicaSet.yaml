@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-calculator
+  labels:
+    app: calculator
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      project: calculator
+
+  template:
+    metadata:
+      name: my-sample-pod
+      labels:
+        project: calculator
+    spec:
+      containers:
+        - name: my-calc
+          image: simplebyte/simplybyte-calculator
+          ports:
+            - containerPort: 5000
