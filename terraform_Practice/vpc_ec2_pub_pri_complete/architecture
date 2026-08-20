@@ -1,0 +1,47 @@
+aws_vpc.my_vpc
+│
+├── Public Subnet
+│   │
+│   ├── Public Route Table Association
+│   │       │
+│   │       ▼
+│   │   Public Route Table
+│   │       │
+│   │       ▼
+│   │   Public Route
+│   │       │
+│   │       ▼
+│   │ Internet Gateway
+│   │
+│   ├── NAT Gateway
+│   │       ▲
+│   │       │
+│   │   Elastic IP
+│   │
+│   └── Public EC2
+│           │
+│           ▼
+│     Public Security Group
+│
+└── Private Subnet
+    │
+    ├── Private Route Table Association
+    │       │
+    │       ▼
+    │   Private Route Table
+    │       │
+    │       ▼
+    │   Private Route
+    │       │
+    │       ▼
+    │   NAT Gateway
+    │
+    └── Private EC2
+            │
+            ▼
+      Private Security Group
+              ▲
+              │
+      Allows traffic from
+              │
+      Public Security Group
