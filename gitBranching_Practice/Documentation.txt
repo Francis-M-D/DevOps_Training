@@ -1,0 +1,369 @@
+===========================================================
+                    GIT COMMANDS DOCUMENTATION
+===========================================================
+
+1. Initializing a New Repository
+Command:
+git init
+
+Description:
+Created a new local Git repository in the current project directory.
+
+-----------------------------------------------------------
+
+2. Configuring Global Username
+Command:
+git config --global user.name "Your-Name"
+
+Description:
+Configured the global Git username to identify the author of future commits.
+
+-----------------------------------------------------------
+
+3. Configuring Global Email
+Command:
+git config --global user.email "youremail@example.com"
+
+Description:
+Configured the global email address used to identify the author of future commits.
+
+-----------------------------------------------------------
+
+4. Checking Repository Status
+Command:
+git status
+
+Description:
+Displayed the current state of the working directory, including staged, modified,
+and untracked files.
+
+-----------------------------------------------------------
+
+5. Staging All Changes
+Command:
+git add .
+
+Description:
+Added all new, modified, and deleted files to the staging area for committing.
+
+-----------------------------------------------------------
+
+6. Staging a Specific File
+Command:
+git add <filename>
+
+Description:
+Added a specific file to the staging area without affecting other files.
+
+-----------------------------------------------------------
+
+7. Saving Changes to Repository History
+Command:
+git commit -m "Commit message"
+
+Description:
+Recorded the staged changes into the repository history with a descriptive
+commit message.
+
+-----------------------------------------------------------
+
+8. Viewing Commit History
+Command:
+git log
+
+Description:
+Displayed the complete chronological history of commits in the repository.
+
+-----------------------------------------------------------
+
+9. Viewing Commit History (Short Format)
+Command:
+git log --oneline
+
+Description:
+Displayed a compact version of the commit history, showing one commit per line.
+
+-----------------------------------------------------------
+
+10. Listing Local Branches
+Command:
+git branch
+
+Description:
+Displayed all local branches and highlighted the currently active branch.
+
+-----------------------------------------------------------
+
+11. Creating a New Branch
+Command:
+git branch <branch-name>
+
+Description:
+Created a new branch without switching to it.
+
+-----------------------------------------------------------
+
+12. Switching Branches (Recommended)
+Command:
+git switch <branch-name>
+
+Description:
+Switched the working directory to an existing branch.
+
+-----------------------------------------------------------
+
+13. Creating and Switching to a New Branch
+Command:
+git switch -c <branch-name>
+
+Description:
+Created a new branch and immediately switched to it.
+
+-----------------------------------------------------------
+
+14. Switching Branches (Older Method)
+Command:
+git checkout <branch-name>
+
+Description:
+Switched from the current branch to the specified branch.
+
+-----------------------------------------------------------
+
+15. Creating and Switching Using Checkout
+Command:
+git checkout -b <branch-name>
+
+Description:
+Created a new branch and switched to it in a single command.
+
+-----------------------------------------------------------
+
+16. Deleting a Branch
+Command:
+git branch -d <branch-name>
+
+Description:
+Deleted a branch that has already been merged.
+
+-----------------------------------------------------------
+
+17. Force Deleting a Branch
+Command:
+git branch -D <branch-name>
+
+Description:
+Deleted a branch regardless of its merge status.
+
+-----------------------------------------------------------
+
+18. Renaming the Current Branch
+Command:
+git branch -m <new-branch-name>
+
+Description:
+Renamed the currently active branch.
+
+-----------------------------------------------------------
+
+19. Cloning a Remote Repository
+Command:
+git clone <repository-url>
+
+Description:
+Downloaded a complete copy of an existing remote Git repository.
+
+-----------------------------------------------------------
+
+20. Viewing Remote Repositories
+Command:
+git remote -v
+
+Description:
+Displayed the configured remote repositories and their URLs.
+
+-----------------------------------------------------------
+
+21. Adding a Remote Repository
+Command:
+git remote add origin <repository-url>
+
+Description:
+Connected the local repository to a remote repository.
+
+-----------------------------------------------------------
+
+22. Fetching Remote Changes
+Command:
+git fetch
+
+Description:
+Downloaded the latest changes from the remote repository without merging them.
+
+-----------------------------------------------------------
+
+23. Pulling Remote Changes
+Command:
+git pull origin main
+
+Description:
+Downloaded and merged the latest changes from the specified remote branch.
+
+-----------------------------------------------------------
+
+24. Pushing Changes to Remote Repository
+Command:
+git push origin main
+
+Description:
+Uploaded local commits to the specified branch of the remote repository.
+
+-----------------------------------------------------------
+
+25. Pushing a New Branch
+Command:
+git push -u origin <branch-name>
+
+Description:
+Uploaded a newly created branch and established upstream tracking.
+
+-----------------------------------------------------------
+
+26. Viewing File Differences
+Command:
+git diff
+
+Description:
+Displayed the differences between the working directory and the staging area.
+
+-----------------------------------------------------------
+
+27. Viewing Staged Differences
+Command:
+git diff --staged
+
+Description:
+Displayed the differences between staged files and the latest commit.
+
+-----------------------------------------------------------
+
+28. Restoring a Modified File
+Command:
+git restore <filename>
+
+Description:
+Discarded local changes and restored the file to its last committed version.
+
+-----------------------------------------------------------
+
+29. Unstaging a File
+Command:
+git restore --staged <filename>
+
+Description:
+Removed a file from the staging area while keeping its local modifications.
+
+-----------------------------------------------------------
+
+30. Removing a Tracked File
+Command:
+git rm <filename>
+
+Description:
+Deleted a file from both the working directory and the Git repository.
+
+-----------------------------------------------------------
+
+31. Renaming or Moving a File
+Command:
+git mv <old-name> <new-name>
+
+Description:
+Renamed or moved a tracked file while preserving its Git history.
+
+-----------------------------------------------------------
+
+32. Temporarily Saving Changes
+Command:
+git stash
+
+Description:
+Saved uncommitted changes temporarily without creating a commit.
+
+-----------------------------------------------------------
+
+33. Restoring Stashed Changes
+Command:
+git stash pop
+
+Description:
+Applied the most recently saved stash and removed it from the stash list.
+
+-----------------------------------------------------------
+
+34. Viewing Saved Stashes
+Command:
+git stash list
+
+Description:
+Displayed all temporarily saved stashes.
+
+-----------------------------------------------------------
+
+35. Viewing Detailed Commit Information
+Command:
+git show
+
+Description:
+Displayed detailed information about the latest commit, including file changes.
+
+-----------------------------------------------------------
+
+36. Undoing the Last Commit (Keep Changes)
+Command:
+git reset --soft HEAD~1
+
+Description:
+Removed the latest commit while keeping all changes staged.
+
+-----------------------------------------------------------
+
+37. Discarding All Uncommitted Changes
+Command:
+git reset --hard HEAD
+
+Description:
+Discarded all uncommitted changes and restored the repository to the latest
+committed state.
+
+-----------------------------------------------------------
+
+38. Viewing All Branches
+Command:
+git branch -a
+
+Description:
+Displayed both local and remote branches.
+
+-----------------------------------------------------------
+
+39. Viewing Remote Branches Only
+Command:
+git branch -r
+
+Description:
+Displayed only the branches available on the remote repository.
+
+-----------------------------------------------------------
+
+40. Viewing Git Configuration
+Command:
+git config --list
+
+Description:
+Displayed all Git configuration settings currently applied to the system
+and repository.
+
+===========================================================
+                     END OF DOCUMENTATION
+===========================================================
